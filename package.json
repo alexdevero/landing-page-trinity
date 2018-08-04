@@ -1,0 +1,35 @@
+{
+  "name": "landing-page-trinity",
+  "version": "0.0.1",
+  "description": "Repository for landing page for Trinity HTML5 & CSS3 template + toolkit.",
+  "license": "unlicensed",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.comalexdevero/landing-page-trinity.git"
+  },
+  "homepage": "https://github.comalexdevero/landing-page-trinity#readme",
+  "bugs": {
+    "url": "https://github.comalexdevero/landing-page-trinity/issues"
+  },
+  "author": {
+    "name": "Alex Devero",
+    "url": "https://alexdevero.com/"
+  },
+  "keywords": [
+    "foo"
+  ],
+  "engines": {
+    "node": ">=10.0",
+    "npm": ">=6.0",
+    "yarn": ">=1.0"
+  },
+  "main": "lib/foo.js",
+  "scripts": {
+    "test": "echo 'test'",
+    "start": "echo 'start'",
+    "prepublish": "echo 'build'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
