@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title></title>
+  <title>Introducing Trinity Template</title>
 
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,8 +13,19 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/modern-normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/regular.css" integrity="sha384-zkhEzh7td0PG30vxQk1D9liRKeizzot4eqkJ8gB3/I+mZ1rjgQk+BSt2F6rT2c+I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+
+  <!-- Normalize stylesheet -->
+  <link rel="stylesheet" href="styles/modern-normalize.css">
+
+  <!-- Bootstrap stylesheet -->
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles/styles.min.css">
 </head>
 
 <body>
@@ -23,23 +34,208 @@
   <![endif]-->
 
   <div class="wrapper">
-    <section class="hero"></section>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Trinity</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Live examples
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Get free demo</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Buy now</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Share</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h2 class="hero__subheading">by DEVERO Corporation</h2>
+
+        <h1 class="hero__heading">Trinity</h1>
+
+        <hr class="divider">
+
+        <p class="hero__pitch">Probably the best bootstrap template in the world!</p>
+      </div>
+    </section>
+
+    <div class="benefits">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="benefits__icon">
+              <img src="" alt="" class="icon icon--medium">
+            </div>
+
+            <h2 class="h2">Customizable Components</h2>
+
+            <p class="text--regular">Cards, Blogs, Info Areas, Sections etc. The templates comes with a large number of components.</p>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="benefits__icon">
+              <img src="" alt="" class="icon icon--medium">
+            </div>
+
+            <h2 class="h2">Beautiful Examples</h2>
+
+            <p class="text--regular">Speed up your development time or get inspired with the large number of example pages.</p>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="benefits__icon">
+              <img src="" alt="" class="icon icon--medium">
+            </div>
+
+            <h2 class="h2">Font Icons</h2>
+
+            <p class="text--regular">The templates comes packed with vector font icons to help you stand out from the crowd.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="included-pages">
+      <div class="container">
+        <h1 class="h1">Included Examples</h1>
+
+        <hr class="divider">
+
+        <p class="text--regular">Gaia Bootstrap Template Pro comes with a large number of example pages, that give you to option to quickly setup the basic flows for your application. From registering to building your profile or setting a blog, we've got you covered.</p>
+
+        <div class="examples__grid"></div>
+      </div>
+    </section>
 
     <section class="description"></section>
 
-    <div class="features-top"></div>
+    <div class="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="features__box">
+              <div class="benefits__icon">
+                <img src="" alt="" class="icon icon--medium">
+              </div>
 
-    <section class="included-pages"></section>
+              <h2 class="h2">Fully Responsive Layout</h2>
 
-    <div class="features-top"></div>
+              <p class="text--regular">The kit is designed to be mobile first. Every component and Example Page looks great on any screen size.</p>
+            </div>
 
-    <section class="cta"></section>
+            <div class="features__box">
+              <div class="benefits__icon">
+                <img src="" alt="" class="icon icon--medium">
+              </div>
 
-    <footer></footer>
+              <h2 class="h2">HTML5 &amp; CSS3 Powered by Bootstrap</h2>
+
+              <p class="text--regular">Trinity - Bootstrap Template is built on top of Bootstrap. Get the benefits of the most powerful framework and the perks of amazing new design.</p>
+            </div>
+
+            <div class="features__box">
+              <div class="benefits__icon">
+                <img src="" alt="" class="icon icon--medium">
+              </div>
+
+              <h2 class="h2">Built with sections</h2>
+
+              <p class="text--regular">Want to prototype very fast? Trinity Bootstrap Template is made with sections that can be integrated very easy and look perfect together.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="cta">
+      <div class="container">
+        <h1 class="h1">Ready to grab this beautiful template?</h1>
+
+        <hr class="divider">
+
+        <div class="btn-group">
+          <a href="" class="btn btn--ghost">Free demo</a>
+
+          <a href="" class="btn btn--full">Buy now for &dollar;29</a>
+        </div>
+
+        <p>Pay one time with:</p>
+
+        <ul>
+          <li><span class="fab fa-cc-paypal"></span></li>
+          <li><span class="fab fa-cc-stripe"></span></li>
+          <li><span class="fab fa-cc-visa"></span></li>
+          <li><span class="fab fa-cc-mastercard"></span></li>
+          <li><span class="fab fa-cc-amex"></span></li>
+          <li><span class="fab fa-bitcoin"></span></li>
+          <li><span class="fab fa-ethereum"></span></li>
+        </ul>
+
+        <div class="cta__share">
+          <ul>
+            <li><a href="" class="btn btn--ghost"><span class="fab fa-twitter"></span> Twitter</a></li>
+
+            <li><a href="" class="btn btn--ghost"><span class="fab fa-facebook"></span> Facebook</a></li>
+
+            <li><a href="" class="btn btn--ghost"><span class="fab fa-google-plus-g"></span> Google+</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; DEVERO Corporation</p>
+          </div>
+
+          <div class="col-md-6">
+            <ul>
+              <li><a href="" class="btn btn--ghost"><span class="fab fa-twitter"></span> Twitter</a></li>
+
+              <li><a href="" class="btn btn--ghost"><span class="fab fa-facebook"></span> Facebook</a></li>
+
+              <li><a href="" class="btn btn--ghost"><span class="fab fa-google-plus-g"></span> Google+</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 
-  <!-- Add your site or application content here -->
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts.min.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
