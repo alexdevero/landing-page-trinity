@@ -4,14 +4,15 @@ import gulp from 'gulp'
 import plumber from 'gulp-plumber'
 
 // Minify HTML files
-gulp.task('html', () => {
+gulp.task('html', (done) => {
   const browserSync = require('browser-sync')
   const changed = require('gulp-changed')
-  const htmlPath = './dist'
   const htmlmin = require('gulp-htmlmin')
   const prune = require('gulp-prune')
 
-  return gulp.src('src/*.html')
+  const htmlPath = './dist'
+
+  gulp.src('src/*.html')
     .pipe(plumber())
     .pipe(prune(htmlPath))
     .pipe(changed(htmlPath))
@@ -25,19 +26,23 @@ gulp.task('html', () => {
     .pipe(browserSync.stream({
       match: '**/*.html'
     }))
+
+  done()
 })
 
 // Hint HTML files
-gulp.task('html:test', ['hb:prod'], () => {
+gulp.task('html:test', (done) => {
   const htmlHint = require('gulp-htmlhint')
 
   console.log('Running HTML lint test')
 
-  return gulp.src('src/*.html')
+  gulp.src('src/*.html')
     .pipe(plumber())
     .pipe(htmlHint())
     .pipe(htmlHint.reporter())
     .pipe(htmlHint.failReporter({
       suppress: false
     }))
+
+  done()
 })
