@@ -5,7 +5,6 @@ import gulp from 'gulp'
 import browserSync from 'browser-sync'
 import plumber from 'gulp-plumber'
 import postcss from 'gulp-postcss'
-import prune from 'gulp-prune'
 import rename from 'gulp-rename'
 import sourcemaps from 'gulp-sourcemaps'
 
@@ -24,6 +23,20 @@ gulp.task('css', (done) => {
     .pipe(gulp.dest(cssPath))
     .pipe(browserSync.stream({
       match: '**/*.css'
+    }))
+
+  done()
+})
+
+gulp.task('css:test', (done) => {
+  const stylelint = require('gulp-stylelint')
+
+  console.log('Running CSS lint test')
+
+  gulp.src('./src/styles/**/*.css')
+    .pipe(plumber())
+    .pipe(stylelint({
+      reportOutputDir: 'reports/',
     }))
 
   done()
