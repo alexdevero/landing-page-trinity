@@ -2,22 +2,26 @@
 
 import gulp from 'gulp'
 import plumber from 'gulp-plumber'
+import prune from 'gulp-prune'
 import webpack from 'webpack'
 import webpackStream from 'webpack-stream'
 
 // Minify JavaScript files
-gulp.task('js', () => {
-  // const babel = require('gulp-babel')
+gulp.task('js', (done) => {
   const browserSync = require('browser-sync')
   const changed = require('gulp-changed')
+  const rename = require('gulp-rename')
+  const uglify = require('gulp-uglify')
+
   const jsPath = './dist/js'
+
   const moduleConfig = {
     entry: './src/js/scripts.js',
     output: {
       filename: 'scripts.js'
     },
     module: {
-      loaders: [
+        loaders: [
         {
           test: /\.js$/,
           loader: 'babel-loader'
@@ -25,14 +29,15 @@ gulp.task('js', () => {
       ]
     }
   }
-  const rename = require('gulp-rename')
-  const uglify = require('gulp-uglify')
+
   const uglifyDropConsole = (process.env.NODE_ENV.trim() !== 'development')
 
-  return gulp.src(['src/js/scripts.js'])
+  gulp.src('src/js/scripts.js')
     .pipe(plumber())
+    .pipe(prune(jsPath, {
+      ext: '.js'
+    }))
     .pipe(changed(jsPath))
-    // .pipe(babel())
     .pipe(webpackStream(moduleConfig, webpack))
     .pipe(uglify({
       compress: {
@@ -49,16 +54,20 @@ gulp.task('js', () => {
     .pipe(browserSync.stream({
       match: '**/*.js'
     }))
+
+  done()
 })
 
-gulp.task('js:test', () => {
+gulp.task('js:test', (done) => {
   const eslint = require('gulp-eslint')
 
   console.log('Running JavaScript lint test')
 
-  return gulp.src('./src/js/scripts.js')
+  gulp.src('./src/js/scripts.js')
     .pipe(plumber())
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
+
+  done()
 })
