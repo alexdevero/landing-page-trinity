@@ -12,5 +12,6 @@ gulp.task('clean', (done) => {
     read: false
   })
     .pipe(rimraf())
+
   done()
 })
