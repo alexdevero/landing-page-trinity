@@ -14,6 +14,7 @@ gulp.task('copy:css', (done) => {
     .pipe(prune(cssPath))
     .pipe(changed(cssPath))
     .pipe(gulp.dest(cssPath))
+
   done()
 })
 
@@ -26,5 +27,6 @@ gulp.task('copy:fonts', (done) => {
     .pipe(prune(fontsPath))
     .pipe(changed(fontsPath))
     .pipe(gulp.dest(fontsPath))
+
   done()
 })
