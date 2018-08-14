@@ -3,14 +3,14 @@
 import gulp from 'gulp'
 
 // Compress images
-gulp.task('images', () => {
+gulp.task('images', (done) => {
   const changed = require('gulp-changed')
   const imagemin = require('gulp-imagemin')
   const plumber = require('gulp-plumber')
   const pngquant = require('imagemin-pngquant')
   const prune = require('gulp-prune')
 
-  return gulp.src(['src/images/**/*', '!src/images/**/*.rar'])
+  gulp.src(['src/images/**/*', '!src/images/**/*.rar'])
     .pipe(plumber())
     .pipe(prune('./dist/images'))
     .pipe(changed('dist/images'))
@@ -32,4 +32,6 @@ gulp.task('images', () => {
       pngquant({quality: '70'})
     ]))
     .pipe(gulp.dest('dist/images'))
+
+  done()
 })
