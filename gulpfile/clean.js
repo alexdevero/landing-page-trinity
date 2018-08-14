@@ -3,13 +3,14 @@
 import gulp from 'gulp'
 
 // Clean dist
-gulp.task('clean', () => {
+gulp.task('clean', (done) => {
   const rimraf = require('gulp-rimraf')
 
   console.log('Clean \'dist\' folder')
 
-  return gulp.src('./dist', {
+  gulp.src('./dist/**/*', {
     read: false
   })
     .pipe(rimraf())
+  done()
 })
