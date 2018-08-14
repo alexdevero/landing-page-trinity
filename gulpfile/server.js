@@ -2,7 +2,7 @@
 
 import gulp from 'gulp'
 
-gulp.task('browser-sync', () => {
+gulp.task('browser-sync', (done) => {
   const browserSync = require('browser-sync')
 
   browserSync.init({
@@ -16,4 +16,6 @@ gulp.task('browser-sync', () => {
       port: '1338'// Default port for server of Browser-sync UI
     }
   })
+
+  done()
 })
