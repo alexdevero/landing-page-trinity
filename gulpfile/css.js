@@ -15,9 +15,6 @@ gulp.task('css', (done) => {
 
   gulp.src('src/styles/styles.css')
     .pipe(plumber())
-    .pipe(prune(cssPath, {
-      ext: '.css'
-    }))
     .pipe(sourcemaps.init())
     .pipe(postcss())
     .pipe(rename({

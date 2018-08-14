@@ -21,22 +21,18 @@ gulp.task('js', (done) => {
       filename: 'scripts.js'
     },
     module: {
-        loaders: [
-        {
-          test: /\.js$/,
-          loader: 'babel-loader'
-        }
-      ]
-    }
+      rules: [{
+        test: /\.js$/,
+        loader: 'babel-loader'
+      }]
+    },
+    mode: (process.env.NODE_ENV && process.env.NODE_ENV.trim() !== 'development') ? 'development' : 'production'
   }
 
-  const uglifyDropConsole = (process.env.NODE_ENV.trim() !== 'development')
+  const uglifyDropConsole = (process.env.NODE_ENV && process.env.NODE_ENV.trim() !== 'development')
 
   gulp.src('src/js/scripts.js')
     .pipe(plumber())
-    .pipe(prune(jsPath, {
-      ext: '.js'
-    }))
     .pipe(changed(jsPath))
     .pipe(webpackStream(moduleConfig, webpack))
     .pipe(uglify({

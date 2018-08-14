@@ -14,9 +14,6 @@ gulp.task('html', (done) => {
 
   gulp.src('src/*.html')
     .pipe(plumber())
-    .pipe(prune(htmlPath, {
-      ext: '.html'
-    }))
     .pipe(changed(htmlPath))
     .pipe(htmlmin({
       collapseWhitespace: true,
