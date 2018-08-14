@@ -35,9 +35,9 @@
   ],
   "main": "lib/foo.js",
   "scripts": {
-    "test": "echo 'test'",
-    "start": "echo 'start'",
-    "prepublish": "echo 'build'"
+    "build": "cross-env NODE_ENV=production gulp",
+    "start": "cross-env NODE_ENV=development gulp",
+    "test": "cross-env NODE_ENV=test gulp test"
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
