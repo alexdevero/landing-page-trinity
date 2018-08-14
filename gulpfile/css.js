@@ -5,15 +5,19 @@ import gulp from 'gulp'
 import browserSync from 'browser-sync'
 import plumber from 'gulp-plumber'
 import postcss from 'gulp-postcss'
+import prune from 'gulp-prune'
 import rename from 'gulp-rename'
 import sourcemaps from 'gulp-sourcemaps'
 
 // CSS
-gulp.task('css', () => {
+gulp.task('css', (done) => {
   const cssPath = './dist/styles'
 
-  return gulp.src('src/styles/main.scss')
+  gulp.src('src/styles/styles.css')
     .pipe(plumber())
+    .pipe(prune(cssPath, {
+      ext: '.css'
+    }))
     .pipe(sourcemaps.init())
     .pipe(postcss())
     .pipe(rename({
@@ -24,4 +28,6 @@ gulp.task('css', () => {
     .pipe(browserSync.stream({
       match: '**/*.css'
     }))
+
+  done()
 })
