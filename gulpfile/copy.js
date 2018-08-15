@@ -10,8 +10,10 @@ gulp.task('copy:css', (done) => {
   const cssPath = './dist/styles'
 
   gulp.src([
-    './node_modules/bootstrap/dist/css/bootstrap.min.css',
-    './node_modules/bootstrap/dist/css/bootstrap.min.css.map',
+    './node_modules/bootstrap/dist/css/bootstrap-grid.min.css',
+    './node_modules/bootstrap/dist/css/bootstrap-grid.min.css.map',
+    // './node_modules/bootstrap/dist/css/bootstrap.min.css',
+    // './node_modules/bootstrap/dist/css/bootstrap.min.css.map',
     './node_modules/modern-normalize/modern-normalize.css',
     './src/styles/_vendor/*'
   ])
