@@ -1,3 +1,7 @@
 /* Base */
 @import '01-base/_base.css';
 @import '01-base/_typography.css';
+
+/* Components */
+@import '03-components/_dropdown.css';
+@import '03-components/_nav.css';
