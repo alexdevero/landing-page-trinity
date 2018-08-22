@@ -38,12 +38,16 @@
 
   <div class="wrapper">
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#">Trinity</a>
 
+          <input type="checkbox" href="#" class="menu-open" name="menu-open" hidden/>
+
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon navbar-toggler-icon-1"></span>
+            <span class="navbar-toggler-icon navbar-toggler-icon-2"></span>
+            <span class="navbar-toggler-icon navbar-toggler-icon-3"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -74,11 +78,11 @@
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
-    <section class="hero">
+    <section class="section section-hero">
       <div class="container">
         <h2 class="hero__subheading">by DEVERO Corporation</h2>
 
@@ -90,7 +94,7 @@
       </div>
     </section>
 
-    <div class="benefits">
+    <div class="section section-benefits">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-4">
@@ -126,7 +130,7 @@
       </div>
     </div>
 
-    <section class="included-pages">
+    <section class="section section-included-pages">
       <div class="container">
         <h1 class="h1">Included Examples</h1>
 
@@ -138,12 +142,12 @@
       </div>
     </section>
 
-    <section class="description"></section>
+    <section class="section section-description"></section>
 
     <div class="features">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 col-lg-4">
             <div class="features__box">
               <div class="benefits__icon">
                 <img src="" alt="" class="icon icon--medium">
@@ -153,7 +157,9 @@
 
               <p class="text--regular">The kit is designed to be mobile first. Every component and Example Page looks great on any screen size.</p>
             </div>
+          </div>
 
+          <div class="col-md-6 col-lg-4">
             <div class="features__box">
               <div class="benefits__icon">
                 <img src="" alt="" class="icon icon--medium">
@@ -163,25 +169,22 @@
 
               <p class="text--regular">Trinity - Bootstrap Template is built on top of Bootstrap. Get the benefits of the most powerful framework and the perks of amazing new design.</p>
             </div>
-
-            <div class="features__box">
-              <div class="benefits__icon">
-                <img src="" alt="" class="icon icon--medium">
-              </div>
-
-              <h2 class="h2">Built with sections</h2>
-
-              <p class="text--regular">Want to prototype very fast? Trinity Bootstrap Template is made with sections that can be integrated very easy and look perfect together.</p>
-            </div>
           </div>
-          <div class="col-md-6">
 
+          <div class="col-md-6 col-lg-4">
+            <div class="benefits__icon">
+              <img src="" alt="" class="icon icon--medium">
+            </div>
+
+            <h2 class="h2">Built with sections</h2>
+
+            <p class="text--regular">Want to prototype very fast? Trinity Bootstrap Template is made with sections that can be integrated very easy and look perfect together.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="cta">
+    <section class="section section-cta">
       <div class="container">
         <h1 class="h1">Ready to grab this beautiful template?</h1>
 
