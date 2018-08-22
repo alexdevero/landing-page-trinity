@@ -14,8 +14,7 @@ gulp.task('copy:css', (done) => {
     './node_modules/bootstrap/dist/css/bootstrap-grid.min.css.map',
     // './node_modules/bootstrap/dist/css/bootstrap.min.css',
     // './node_modules/bootstrap/dist/css/bootstrap.min.css.map',
-    './node_modules/modern-normalize/modern-normalize.css',
-    './src/styles/_vendor/*'
+    './node_modules/modern-normalize/modern-normalize.css'
   ])
     .pipe(plumber())
     .pipe(prune(cssPath))
