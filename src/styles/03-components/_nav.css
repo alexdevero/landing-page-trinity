@@ -1,0 +1,24 @@
+/* Navigation */
+.navbar,
+.navbar-nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.navbar {
+  align-items: center;
+}
+
+.navbar-nav {
+  list-style-type: none;
+
+  & li {
+    padding: 16px 12px;
+    margin: 0;
+  }
+}
+
+.navbar-nav a {
+
+}
