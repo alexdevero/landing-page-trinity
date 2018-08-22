@@ -1,0 +1,13 @@
+/* Base */
+html {
+  font-size: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+body {
+  font: 100% / 1.618 Yantramanav, sans-serif;
+  color: #333;
+}
