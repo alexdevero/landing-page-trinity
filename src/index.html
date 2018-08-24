@@ -42,20 +42,24 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#">Trinity</a>
 
-          <input type="checkbox" href="#" class="menu-open" name="menu-open" hidden/>
+          <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" hidden aria-hidden="true" />
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon navbar-toggler-icon-1"></span>
-            <span class="navbar-toggler-icon navbar-toggler-icon-2"></span>
-            <span class="navbar-toggler-icon navbar-toggler-icon-3"></span>
-          </button>
+          <label for="menu-open">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon navbar-toggler-icon-1"></span>
+              <span class="navbar-toggler-icon navbar-toggler-icon-2"></span>
+              <span class="navbar-toggler-icon navbar-toggler-icon-3"></span>
+            </button>
+          </label>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Live examples
+                  <label class="dropdown-label" for="dropdown-examples">Live examples</label>
                 </a>
+
+                <input type="checkbox" name="dropdown-examples" id="dropdown-examples" hidden aria-hidden="true">
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#">Action</a>
