@@ -1,4 +1,12 @@
 /* Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: hsla(255, 100%, 100%, .1);
+  box-shadow: 5px 0 10px hsla(0, 100%, 0%, .25);
+}
+
 .navbar,
 .navbar-nav {
   display: flex;
@@ -8,6 +16,13 @@
 
 .navbar {
   align-items: center;
+}
+
+/* use https://codepen.io/lbebber/pen/LELBEo */
+.navbar-toggler {
+  @media (min-width: 769px) {
+    display: none;
+  }
 }
 
 .navbar-nav {
