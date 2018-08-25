@@ -1,0 +1,9 @@
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: hsl(255, 100%, 100%);
+  box-shadow: 5px 0 10px hsla(0, 100%, 0%, .25);
+}
