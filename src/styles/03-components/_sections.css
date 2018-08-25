@@ -1,0 +1,11 @@
+/* Sections */
+.section-hero {
+  padding-top: 107px;/* height of fixed header */
+  min-height: 320px;
+  height: 100vh;/* height of fixed header */
+  max-height: 1080px;
+  background: url(../images/david-villasana-764117-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
